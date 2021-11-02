@@ -1,0 +1,123 @@
+#navbarLogo{
+    width: 50px;
+    height: 50px;
+}
+
+#tableLogo{
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+
+#downloadLogo{
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+#logo{
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.btn-round{
+    border-radius: 30px;
+}
+
+.bg-banner-height{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 550px;
+}
+
+.bg-banner-image{
+    /* background-color: rgb(209, 207, 207); */
+    background-image: url(images/shadowEscapeBGDark.jpg);
+    background-size: cover;
+    margin-left: auto;
+    margin-left: auto;
+    background-position: center;
+    transition: 1s;
+
+    animation-name: animate;
+    animation-direction: normal;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate{
+    0%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
+    17%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
+    20%{background-image: url(images/ArtbrdArtboard\ 2Story.jpg);}
+    37%{background-image: url(images/ArtbrdArtboard\ 2Story.jpg);}
+    40%{background-image: url(images/ArtbrdArtboard\ 3Story.jpg);}
+    57%{background-image: url(images/ArtbrdArtboard\ 3Story.jpg);}
+    60%{background-image: url(images/ArtbrdArtboard\ 4Story.jpg);}
+    77%{background-image: url(images/ArtbrdArtboard\ 4Story.jpg);}
+    80%{background-image: url(images/shadowEscapeBGDark2.jpg);}
+    97%{background-image: url(images/shadowEscapeBGDark2.jpg);}
+    100%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
+}
+
+.bigFont{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.outline{
+    outline: auto;
+}
+
+.img-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.normal{
+    color: white;
+    text-decoration: none;
+}
+
+.bg-gradient{
+    background: linear-gradient(to bottom,black,black,rgb(0,0,0,0.6),rgb(0,0,0,0.5),rgb(0,0,0,0.4), rgb(0, 0, 0, 0));
+}
+
+.circle{
+    height: 75px;
+    width: 75px;
+    background-color: white;
+    border-radius: 50%;
+    border: turquoise;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-transparant{
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.bg-about{
+    background-image: url(images/terapung.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#emailLogo{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
