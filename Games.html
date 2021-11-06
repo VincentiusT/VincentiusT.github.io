@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <script src="gamesController.js"></script>
     </head>
         <!-- navbar -->
         <nav class="navbar navbar-expand-sm navbar-dark bg-black">
@@ -33,74 +34,151 @@
     
         <!-- our games -->
         <!-- our games -->
-        <div class="container">
-            <br><br><br>
-            <h3 class="bigFont text-left text-dark">Check my Games!</h3>
-            <table class="table">
-                <tr>
-                    <th>Logo</th> 
-                    <th>Games</th>
-                    <th>Genre</th>
-                    <th>Download</th>
-                </tr>
-                <tr>
-                    <td><img src="images/bounceBallLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Bounce Ball</td>
-                    <td>Casual</td>
-                    <td><a href="https://play.google.com/store/apps/details?id=com.beware.BounceBall&hl=en_US&gl=US" target="_blank">
-                        <img src="images/download.png" id="downloadLogo" alt="download">
-                    </a></td>
-                </tr>
-                <tr>
-                    <td><img src="images/backHomeLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Back Home</td>
-                    <td>Casual</td>
-                    <td>- </td>
-                </tr>
-                <tr>
-                    <td><img src="images/24Logo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>24!</td>
-                    <td>Casual</td>
-                    <td><a href="https://play.google.com/store/apps/details?id=com.Beware.game24&hl=en_US&gl=US" target="_blank">
-                        <img src="images/download.png" id="downloadLogo" alt="download">
-                    </a></td>
-                </tr>
-                <tr>
-                    <td><img src="images/hopeLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Hope</td>
-                    <td>Casual</td>
-                    <td><a href="https://play.google.com/store/apps/details?id=com.Beware.Hope&hl=en_US&gl=US" target="_blank">
-                        <img src="images/download.png" id="downloadLogo" alt="download">
-                    </a></td>
-                </tr>
-                <tr>
-                    <td><img src="images/argeliaLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Argelia</td>
-                    <td>Casual</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Shadow Escape</td>
-                    <td>Puzzle</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td><img src="images/dandeLogo.png" id="tableLogo" alt="Bounce Ball"></td>
-                    <td>Dandelion</td>
-                    <td>Puzzle</td>
-                    <td>-</td>
-                  </tr>
-              </table>
-        </div>
-        
-        
-
         <div class="bg-black">
-            <br>
-            <p class="text-center text-light">Games by Beware! 2020</p>
+            <div class="container">
+                <br>
+                <button class="btn-round btn" name="answer" value="Show Div" onclick="hideAll();showDiv('bounceballDiv');currentSlide(1, 'mySlides','dot');"><img src="images/bounceBallLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" name="answer" value="Show Div" onclick="hideAll();showDiv('24Div');currentSlide(1, 'mySlides2','dot2');"><img src="images/24Logo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/argeliaLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/dandeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/hopeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-round btn" ><img src="images/shadowEscapeLogo.png" id="tableLogo" alt="Bounce Ball"> </button> 
+            </div>
             <br>
         </div>
+        
+        <!-- bounceball -->
+        <div class="container" id="bounceballDiv" style="display: none;" class="answer_list"> 
+            <br>
+            <h3 class="bigFont text-center" >Bounce Ball</h3>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="slideshow-container" >
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides">
+                          <img class="btn-round" src="images/bounceball.png" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <img class="btn-round" src="images/bounceball1.png" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides ">
+                          <img class="btn-round" src="images/bounceball2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides ">
+                            <img class="btn-round" src="images/bounceball3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides ">
+                            <img class="btn-round" src="images/bounceballBanner.png" style="width:100%">
+                        </div>
+                      
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides', 'dot')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides', 'dot')">&#10095;</a>
+                      </div>
+                      <br>
+                      
+                      <!-- The dots/circles -->
+                      <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 'mySlides', 'dot')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'mySlides', 'dot')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'mySlides', 'dot')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'mySlides', 'dot')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'mySlides', 'dot')"></span>
+                      </div>
+                </div>   
+                <div class="col-sm">
+                    <strong>Mobile Game - Casual</strong> <br>
+                    <strong>Made by Unity</strong>
+                    <p>A casual endless game about bouncing ball! Bounce your ball to the wall to get points, but don't forget to avoid all of the obstacles!
+                        you can got superpower by bouncing your ball to the edge of the wall! Destroy the obstacles using that superpower and get more points!
+                    </p>
+                    <p>This is my first ever game that published in playstore! Not the best but i enjoyed making this!</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.beware.BounceBall&hl=en_US&gl=US" target="_blank">
+                        <img src="images/download.png" id="downloadLogo" alt="download">
+                    </a>
+                </div> 
+            </div>
+            
+              
+        </div>
+
+        <!-- 24! -->
+        <div class="container" id="24Div"  style="display:none;" class="answer_list" > 
+            <br>
+            <h3 class="bigFont text-center">24!</h3>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="slideshow-container" style="width: 60%;">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides2">
+                          <img class="btn-round" src="images/24.png" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides2">
+                          <img class="btn-round" src="images/241.png" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides2">
+                          <img class="btn-round" src="images/242.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides2">
+                            <img class="btn-round" src="images/243.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides2">
+                            <img class="btn-round" src="images/244.png" style="width:100%">
+                        </div>
+                      
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides2', 'dot2')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1,'mySlides2', 'dot2')">&#10095;</a>
+                      </div>
+                      <br>
+                      
+                      <!-- The dots/circles -->
+                      <div style="text-align:center">
+                        <span class="dot2" onclick="currentSlide(1, 'mySlides2', 'dot2')"></span>
+                        <span class="dot2" onclick="currentSlide(2, 'mySlides2', 'dot2')"></span>
+                        <span class="dot2" onclick="currentSlide(3, 'mySlides2', 'dot2')"></span>
+                        <span class="dot2" onclick="currentSlide(4, 'mySlides2', 'dot2')"></span>
+                        <span class="dot2" onclick="currentSlide(5, 'mySlides2', 'dot2')"></span>
+                      </div>
+                </div>   
+                <div class="col-sm">
+                    <strong>Mobile Game - Casual</strong> <br>
+                    <strong>Made by Unity</strong>
+                    <p>This is a simple math game that makes people improve their skill and abilities at counting.
+
+                        You'll given 4 random numbers and try to operate it using 4 operators addition(+) , subtraction(-) , multiplication (x) , and division (÷) until it become 24! That's all, this game is really this simple as it looks. But some number combinations may be difficult to solve.
+                    </p>
+
+                    <p>
+                        There are 2 mode in this game,
+                    </p> 
+                    <li>Casual mode, try to combine all the numbers to make 24, so you can go to the next level</li>  
+                    <li>Time limit, you have 45 second to combine all the numbers to make 24 and get points after solving it. You'll get higher points if you solve the problem faster. And be careful in this mode, the numbers not always can be solve! so you must click the "no-solution" button if it's impossible to solve.</li>    
+                        
+                
+                    <a href="https://play.google.com/store/apps/details?id=com.Beware.game24&hl=en_US&gl=US" target="_blank">
+                        <img src="images/download.png" id="downloadLogo" alt="download">
+                    </a>
+                </div> 
+            </div>
+            
+              
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </body>
