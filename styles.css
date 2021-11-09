@@ -196,6 +196,8 @@
 .imageDesc{
     font-size: 1.25em;
     margin-top: 0.25em;
+    margin-left: 1em;
+    margin-right: 1em;
     align-items: center;
     justify-content: center;
 }
@@ -215,7 +217,7 @@
 }
 
 /* Hide the images by default */
-.mySlides, .mySlides2 {
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8{
   display: none;
 }
 
@@ -267,7 +269,7 @@
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2 {
+.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -282,3 +284,25 @@
   background-color: #717171;
 }
 
+.btn-gamelogo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.btn-gamelogo:hover {
+    background-color:gray;
+    border-radius: 100%;
+}
+
+.gamelogo{
+    border-radius: 90%;
+    width: 100px;
+    height: 100px;
+}
+
+.piagamlogo{
+    color: navy;
+    width: 30px;
+    height: 30px;
+}

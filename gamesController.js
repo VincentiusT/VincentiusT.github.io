@@ -1,3 +1,5 @@
+
+
 function showDiv(id) {
     document.getElementById(id).style.display = "block";
 }
@@ -9,6 +11,12 @@ function hideDiv(id) {
 function hideAll(){
     document.getElementById("bounceballDiv").style.display = "none";
     document.getElementById("24Div").style.display = "none";
+    document.getElementById("hopeDiv").style.display = "none";
+    document.getElementById("argeliaDiv").style.display = "none";
+    document.getElementById("dandelionDiv").style.display = "none";
+    document.getElementById("shadowDiv").style.display = "none";
+    document.getElementById("covidDiv").style.display = "none";
+    document.getElementById("meliorateDiv").style.display = "none";
 }
 
  var slideIndex = 1;
