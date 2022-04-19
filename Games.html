@@ -7,30 +7,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
         <script src="gamesController.js"></script>
+        <link rel="shortcut icon" type="image/png" href="images/vincentLogo1.png">
     </head>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-sm navbar-dark bg-black">
-            <img src="images/Logo1.png" alt="bewarelogo" id="navbarLogo">
-            <a href="#" class="navbar-brand">Vincentius Tanubrata</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-black py-3">
+          <img src="images/vincentLogo.png" alt="bewarelogo" id="navbarLogo">
+            <div class="navbar-left">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                    <li class="nav-item ">
+                        <p  class="h5 text-light" id="super-bold">VINCENTIUS &nbsp</p>
                     </li>
-                    <li class="nav-item">
-                        <a href="Games.html" class="nav-link">Games</a>
+                    <li class="nav-item ">
+                        <p class="h5 red" id="super-bold">TANUBRATA</p>
                     </li>
-                    <li class="nav-item">
-                        <a href="About.html" class="nav-link">About</a>
-                    </li>
-                   
                 </ul>
             </div>
-        </nav>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item font-weight-bold">
+                      <a href="index.html" class="nav-link text-light">HOME &nbsp &nbsp</a>
+                  </li>
+                  <li class="nav-item font-weight-bold">
+                      <a href="Games.html" class="nav-link text-light">GAMES &nbsp &nbsp</a>
+                  </li>
+                  <li class="nav-item font-weight-bold">
+                      <a href="About.html" class="nav-link text-light">ABOUT &nbsp &nbsp</a>
+                  </li>
+                 
+              </ul>
+          </div>
+      </nav>
     
         <!-- our games -->
         <!-- our games -->
@@ -45,7 +56,10 @@
                 <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('shadowDiv');currentSlide(1, 'mySlides6','dot6');"><img src="images/shadowEscapeLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
                 <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('covidDiv');currentSlide(1, 'mySlides7','dot7');"><img src="images/covidheroes/covidHeroesLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
                 <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('meliorateDiv');currentSlide(1, 'mySlides8','dot8');"><img src="images/meliorateLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
-            </div>
+                <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('othersideDiv');currentSlide(1, 'mySlides9','dot9');"><img src="images/othersideLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('repeaterDiv');currentSlide(1, 'mySlides10','dot10');"><img src="images/RepeaterLogo1.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
+                <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('ironrunDiv');currentSlide(1, 'mySlides11','dot11');"><img src="images/ironRunLogo1.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button> 
+              </div>
             <br>
         </div>
         <script>
@@ -365,7 +379,10 @@
                     <p>solve the puzzle with blowing the dandelion away from danger like wind, bird, and paper plane. take care of the dandelion so it can reach fertile soil and grow up into mature dandelion.</p>
                     <p>Has multiple levels with different background and scenery to enjoy!</p>
             
-                    
+                    <a href="https://www.youtube.com/watch?v=4x_M3001KvY&t=100s" target="_blank">
+                      <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+                      Watch gameplay trailer on youtube
+                    </a>
                 </div> 
             </div>
               
@@ -567,6 +584,206 @@
               
         </div>
 
+        <!-- Otherside -->
+        <div class="container" id="othersideDiv"  style="display:none;" class="answer_list" > 
+          <br>
+          <h3 class="bigFont text-center">Otherside</h3>
+          <br>
+          <div class="row">
+              <div class="col-sm">
+                  <div class="slideshow-container" style="width: 60%;">
+                      <!-- Full-width images with number and caption text -->
+                      <div class="mySlides9">
+                        <img class="btn-round" src="images/otherside/ss3.png" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides9">
+                        <img class="btn-round" src="images/otherside/ss2.png" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides9">
+                        <img class="btn-round" src="images/otherside/ss1.png" style="width:100%">
+                      </div>
+
+                      <div class="mySlides9">
+                          <img class="btn-round" src="images/otherside/ss4.png" style="width:100%">
+                      </div>
+
+                      <div class="mySlides9">
+                          <img class="btn-round" src="images/otherside/ss5.png" style="width:100%">
+                      </div>
+                    
+                      <!-- Next and previous buttons -->
+                      <a class="prev" onclick="plusSlides(-1, 'mySlides9', 'dot9')">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1,'mySlides9', 'dot9')">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                      <span class="dot9" onclick="currentSlide(1, 'mySlides9', 'dot9')"></span>
+                      <span class="dot9" onclick="currentSlide(2, 'mySlides9', 'dot9')"></span>
+                      <span class="dot9" onclick="currentSlide(3, 'mySlides9', 'dot9')"></span>
+                      <span class="dot9" onclick="currentSlide(4, 'mySlides9', 'dot9')"></span>
+                      <span class="dot9" onclick="currentSlide(5, 'mySlides9', 'dot9')"></span>
+                    </div>
+              </div>   
+              <div class="col-sm">
+                  <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+                  <strong style="color:navy">Sunday's Choice Nomination in GDBAY Hypercasual Jam Competition</strong>
+                  <br><br>
+                  <strong>Mobile Game - 2D Hyper casual</strong> <br>
+                  <strong>Made by Unity</strong>
+                  <p> A endless game about "love is blind"
+                  </p>
+
+                  <p>
+                      If you move, you cannot see the obstacles. You need to stay for a moment to see all of the obstacles around you
+                       so you can avoid it!
+                  </p>
+              
+                  <a href="https://drive.google.com/file/d/1V2GXLctbZuH14JB-R-E9mnizGqcSK0KB/view?usp=sharing" target="_blank">
+                    <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+                    Watch gameplay trailer on Google Drive
+                  </a>
+              </div> 
+          </div>
+            
+        </div>
+
+        <!-- Repeater -->
+        <div class="container" id="repeaterDiv"  style="display:none;" class="answer_list" > 
+          <br>
+          <h3 class="bigFont text-center">Repeater</h3>
+          <br>
+          <div class="row">
+              <div class="col-sm">
+                  <div class="slideshow-container" style="width: 60%;">
+                      <!-- Full-width images with number and caption text -->
+                      <div class="mySlides10">
+                        <img class="btn-round" src="images/Repeater/1.png" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides10">
+                        <img class="btn-round" src="images/Repeater/2.png" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides10">
+                        <img class="btn-round" src="images/Repeater/4.png" style="width:100%">
+                      </div>
+
+                      <div class="mySlides10">
+                          <img class="btn-round" src="images/Repeater/5.png" style="width:100%">
+                      </div>
+
+                      <div class="mySlides10">
+                          <img class="btn-round" src="images/Repeater/6.png" style="width:100%">
+                      </div>
+                    
+                      <!-- Next and previous buttons -->
+                      <a class="prev" onclick="plusSlides(-1, 'mySlides10', 'dot10')">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1,'mySlides10', 'dot10')">&#10095;</a>
+                    </div>
+                    <br>
+                    
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                      <span class="dot10" onclick="currentSlide(1, 'mySlides10', 'dot10')"></span>
+                      <span class="dot10" onclick="currentSlide(2, 'mySlides10', 'dot10')"></span>
+                      <span class="dot10" onclick="currentSlide(3, 'mySlides10', 'dot10')"></span>
+                      <span class="dot10" onclick="currentSlide(4, 'mySlides10', 'dot10')"></span>
+                      <span class="dot10" onclick="currentSlide(5, 'mySlides10', 'dot10')"></span>
+                    </div>
+              </div>   
+              <div class="col-sm">
+
+                  <strong>Mobile Game - 3D Hyper casual, Puzzle</strong> <br>
+                  <strong>Made by Unity</strong>
+                  <p> A game about repeating moves to solve the puzzle! 
+                      Make the cube touch the finish point using a predefined moves and repeat it over and over again.
+                  </p>
+                  <p>
+                    *Joined Voodoo Spring Competition - Reach Prototype stage
+                  </p>
+                  
+                  <a href="https://play.google.com/store/apps/details?id=com.beware.repeater&hl=en&gl=US" target="_blank">
+                    <img src="images/download.png" id="downloadLogo" alt="download">
+                  </a>
+                  <a href="https://drive.google.com/file/d/1hSlKFxzy6OPyhdJ4uRhLCTXxl0aTDCLv/view?usp=sharing" target="_blank">
+                    <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+                    Watch gameplay trailer on Google Drive
+                  </a>
+              </div> 
+          </div>
+          
+        </div>
+
+        <!-- Iron Run -->
+      <div class="container" id="ironrunDiv"  style="display:none;" class="answer_list" > 
+        <br>
+        <h3 class="bigFont text-center">Iron Run</h3>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <div class="slideshow-container" style="width: 60%;">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides11">
+                      <img class="btn-round" src="images/ironrun/ss2.png" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides11">
+                      <img class="btn-round" src="images/ironrun/ss3.png" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides11">
+                      <img class="btn-round" src="images/ironrun/ss4.png" style="width:100%">
+                    </div>
+
+                    <!-- <div class="mySlides11">
+                        <img class="btn-round" src="images/Repeater/5.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides11">
+                        <img class="btn-round" src="images/Repeater/6.png" style="width:100%">
+                    </div> -->
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1, 'mySlides11', 'dot11')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1,'mySlides11', 'dot11')">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot11" onclick="currentSlide(1, 'mySlides11', 'dot11')"></span>
+                    <span class="dot11" onclick="currentSlide(2, 'mySlides11', 'dot11')"></span>
+                    <span class="dot11" onclick="currentSlide(3, 'mySlides11', 'dot11')"></span>
+                    <!-- <span class="dot11" onclick="currentSlide(4, 'mySlides11', 'dot11')"></span>
+                    <span class="dot11" onclick="currentSlide(5, 'mySlides11', 'dot11')"></span> -->
+                  </div>
+            </div>   
+            <div class="col-sm">
+
+                <strong>Mobile Game - 3D Hyper casual, Runner</strong> <br>
+                <strong>Made by Unity</strong>
+                <p> A game about Ironing Clothes, but with runner gameplay. You can add another iron to make ironing clothes easier, 
+                  and you need to avoid all of the obstacles in front of you!
+                </p>
+                <p>
+                  *Joined Voodoo Spring Competition - Reach Prototype stage
+                </p>
+                
+                <a href="https://play.google.com/store/apps/details?id=com.beware.ironrun&hl=en&gl=US" target="_blank">
+                  <img src="images/download.png" id="downloadLogo" alt="download">
+                </a>
+                <a href="https://drive.google.com/file/d/18j-3dseRFEiTgGUIY_rQB394EFOzUj_v/view?usp=sharing" target="_blank">
+                  <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+                  Watch gameplay trailer on Google Drive
+                </a>
+            </div> 
+        </div>
+          
+    </div>
         <script>
           window.onload = showDiv('bounceballDiv')
           window.onload = currentSlide(1, 'mySlides','dot')

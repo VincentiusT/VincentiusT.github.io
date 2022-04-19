@@ -15,6 +15,9 @@ function hideAll(){
     document.getElementById("shadowDiv").style.display = "none";
     document.getElementById("covidDiv").style.display = "none";
     document.getElementById("meliorateDiv").style.display = "none";
+    document.getElementById("othersideDiv").style.display = "none";
+    document.getElementById("repeaterDiv").style.display = "none";
+    document.getElementById("ironrunDiv").style.display = "none";
 }
 
  var slideIndex = 1;

@@ -1,6 +1,10 @@
 #navbarLogo{
     width: 50px;
     height: 50px;
+    left:50%;
+    margin-left: -25px;
+    display: block;
+    position: absolute;
 }
 
 #tableLogo{
@@ -51,7 +55,7 @@
 
 .bg-banner-image{
     /* background-color: rgb(209, 207, 207); */
-    background-image: url(images/shadowEscapeBGDark.jpg);
+    background-image: url(images/dream.png);
     background-size: cover;
     margin-left: auto;
     margin-left: auto;
@@ -67,7 +71,7 @@
     animation-timing-function: ease-in-out;
 }
 
-@keyframes animate{
+/* @keyframes animate{
     0%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
     17%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
     20%{background-image: url(images/ArtbrdArtboard\ 2Story.jpg);}
@@ -79,7 +83,7 @@
     80%{background-image: url(images/shadowEscapeBGDark2.jpg);}
     97%{background-image: url(images/shadowEscapeBGDark2.jpg);}
     100%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
-}
+} */
 
 .bigFont{
     font-size: 50px;
@@ -88,6 +92,10 @@
 
 .bg-black{
     background-color: black;
+}
+
+.bg-purple{
+    background-color: #2f1428;
 }
 
 .outline{
@@ -134,6 +142,14 @@
     height: auto;
 }
 
+#super-bold{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.red{
+    color: #d65f5f;
+}
+
 .trapezoid {
 	background-image: url(images/terapung.png);
 	border-left: 25px solid transparent;
@@ -174,6 +190,7 @@
     transition: 0.25s;
 }
 
+
 .imageOverlay > *{
     transform: translateY(20px);
     transition: transform 0.25s;
@@ -184,6 +201,36 @@
 }
 
 .imageOverlay:hover > *{
+    transform: translateY(0px);
+    transition: transform 0.25s;
+}
+
+.imageOverlay-half{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.imageOverlay-half > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.imageOverlay-half:hover{
+    opacity: 1;
+}
+
+.imageOverlay-half:hover > *{
     transform: translateY(0px);
     transition: transform 0.25s;
 }
@@ -217,7 +264,7 @@
 }
 
 /* Hide the images by default */
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8{
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11{
   display: none;
 }
 
@@ -269,7 +316,7 @@
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8 {
+.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11 {
   cursor: pointer;
   height: 15px;
   width: 15px;
