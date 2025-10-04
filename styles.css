@@ -13,6 +13,44 @@
     height: auto;
 }
 
+#journeyLogo {
+    max-width: 200px;
+}
+
+#journeyLogo2 {
+    max-width: 400px;
+}
+
+
+#journeyHalfbrick {
+    max-width: 90%;
+    height: auto;
+    margin-top: -50px;
+}
+
+#journeyAgate {
+    max-width: 90%;
+    max-height: 300px;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+#journeyBeware {
+    max-width: 90%;
+    max-height: 350px;
+    margin-top: 40px;
+}
+
+.journeyImage {
+    transition: transform 0.25s;
+}
+
+.journeyImage:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
+}
+
+
 #downloadLogo{
     max-width: 150px;
     width: 100%;
@@ -25,9 +63,29 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     
+}
+
+.journeyTimelineHeader {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minWidthMedium{
+    min-width:400px;
+}
+
+.imageflex {
+    display: flex;
+    float: left;
+
+}
+
+.imageflexcontent {
+    margin-left: 5px;
+    margin-top: 20px;
 }
 
 .myPhoto{
@@ -43,6 +101,19 @@
 
 .btn-round{
     border-radius: 30px;
+}
+
+.extraPadding{
+    padding: 15px;
+}
+
+.extraLongPadding {
+    padding: 25px;
+}
+
+.extraHorizontalMargin {
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .bg-banner-height{
@@ -90,6 +161,15 @@
     font-weight: bold;
 }
 
+.medFont {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gray{
+    color:darkgray;
+}
+
 .bg-black{
     background-color: black;
 }
@@ -103,6 +183,7 @@
 }
 
 .img-center{
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -112,8 +193,18 @@
     text-decoration: none;
 }
 
+.tag {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .bg-gradient{
     background: linear-gradient(to bottom,black,black,rgb(0,0,0,0.6),rgb(0,0,0,0.5),rgb(0,0,0,0.4), rgb(0, 0, 0, 0));
+}
+
+.bg-cream {
+    background-color: #ECE8E1;
 }
 
 .circle{
@@ -171,7 +262,7 @@
 
 .imgGame{
     display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
 .imageOverlay{
@@ -332,9 +423,9 @@
 }
 
 .btn-gamelogo{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    /*border-radius: 100%;*/
 }
 
 .btn-gamelogo:hover {
