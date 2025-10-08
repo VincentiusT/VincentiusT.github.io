@@ -18,6 +18,7 @@ function hideAll(){
     document.getElementById("othersideDiv").style.display = "none";
     document.getElementById("repeaterDiv").style.display = "none";
     document.getElementById("ironrunDiv").style.display = "none";
+    document.getElementById("rumbleKingDiv").style.display = "none";
 }
 
  var slideIndex = 1;
