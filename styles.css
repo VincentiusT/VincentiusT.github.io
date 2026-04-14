@@ -32,10 +32,12 @@ html {
 }
 
 #rumbleKingLogo {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: 40px;
     left: 50%;
     display: block;
+    object-fit: contain;
 }
 
 #rumbleKingLogoBig {
@@ -519,4 +521,208 @@ html {
 .youtubelogo{
     width: 40px;
     height: auto;
+}
+
+.rk-gameplay-wrap {
+    position: relative;
+    padding: 0 52px;
+}
+
+.rk-gameplay-grid {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 50%;
+    scroll-padding-right: 50%;
+    scroll-behavior: smooth;
+    padding: 60px 0;
+    scrollbar-width: none;
+}
+
+.rk-gameplay-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.rk-gameplay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background-color: #000000;
+}
+
+.rk-gameplay-item {
+    flex: 0 0 720px;
+    width: 720px;
+    height: 432px;
+    scroll-snap-align: center;
+    position: relative;
+    transform: scale(1);
+    opacity: 0.72;
+    z-index: 1;
+    transition: transform 0.25s ease, opacity 0.25s ease, z-index 0.25s ease;
+}
+
+.rk-gameplay-item.rk-gameplay-focus {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 6;
+}
+
+.rk-gameplay-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.rk-gameplay-nav:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.rk-gameplay-nav-left {
+    left: 2px;
+}
+
+.rk-gameplay-nav-right {
+    right: 2px;
+}
+
+.rk-character-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.rk-character-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 14px;
+}
+
+.rk-character-image-holder {
+    flex: 0 0 40%;
+    min-width: 0;
+    width: auto;
+    height: 175px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rk-character-info {
+    flex: 0 0 60%;
+}
+
+.rk-character-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.rk-character-name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2f1428;
+}
+
+.rk-character-desc {
+    margin: 2px 0 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+@media (max-width: 575px) {
+    #rumbleKingLogo {
+        height: 30px;
+        max-width: 140px;
+    }
+
+    .rk-gameplay-grid {
+        gap: 14px;
+        padding: 30px 0;
+    }
+
+    .rk-gameplay-wrap {
+        padding: 0 40px;
+    }
+
+    .rk-gameplay-item {
+        flex: 0 0 92%;
+        width: 92%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .rk-gameplay-item.rk-gameplay-focus {
+        transform: scale(1.05);
+    }
+
+    .rk-character-list {
+        grid-template-columns: 1fr;
+    }
+
+    .rk-character-card {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .rk-character-image-holder {
+        height: 120px;
+    }
+
+    .rk-character-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .rk-character-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 576px) {
+    .rk-gameplay-item {
+        flex: 0 0 78%;
+        width: 78%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .rk-gameplay-item.rk-gameplay-focus {
+        transform: scale(1.1);
+    }
+
+    .rk-character-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rk-character-image-holder {
+        height: 135px;
+    }
+
+    .rk-character-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }

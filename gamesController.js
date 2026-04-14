@@ -21,6 +21,16 @@ function hideAll(){
     document.getElementById("rumbleKingDiv").style.display = "none";
 }
 
+function openGameDetail(detailId, slideClass, dotClass) {
+    hideAll();
+    showDiv(detailId);
+    currentSlide(1, slideClass, dotClass);
+
+    if (typeof window.jQuery !== "undefined") {
+        window.jQuery("#gameDetailModal").modal("show");
+    }
+}
+
  var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -49,3 +59,7 @@ function showSlides(n, id, dotid) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+window.onload = function () {
+    hideAll();
+};

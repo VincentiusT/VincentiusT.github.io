@@ -54,29 +54,183 @@
     </div>
 </nav>
 
-<!-- our games -->
-<!-- our games -->
 <div class="bg-black">
-    <div class="container">
-        <br>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('bounceballDiv');currentSlide(1, 'mySlides','dot');"><img src="images/bounceBallLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('24Div');currentSlide(1, 'mySlides2','dot2');"><img src="images/24Logo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('hopeDiv');currentSlide(1, 'mySlides3','dot3');"><img src="images/hopeLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('argeliaDiv');currentSlide(1, 'mySlides4','dot4');"><img src="images/argeliaLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('dandelionDiv');currentSlide(1, 'mySlides5','dot5');"><img src="images/dandeLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('shadowDiv');currentSlide(1, 'mySlides6','dot6');"><img src="images/shadowEscapeLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('covidDiv');currentSlide(1, 'mySlides7','dot7');"><img src="images/covidheroes/covidHeroesLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('meliorateDiv');currentSlide(1, 'mySlides8','dot8');"><img src="images/meliorateLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('othersideDiv');currentSlide(1, 'mySlides9','dot9');"><img src="images/othersideLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('repeaterDiv');currentSlide(1, 'mySlides10','dot10');"><img src="images/RepeaterLogo1.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('ironrunDiv');currentSlide(1, 'mySlides11','dot11');"><img src="images/ironRunLogo1.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="hideAll();showDiv('rumbleKingDiv');currentSlide(1, 'mySlides12','dot12');"><img src="images/rumbleKingLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
+    <div class="container text-center py-3">
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('shadowDiv', 'mySlides6', 'dot6');"><img src="images/shadowEscapeLogo.png" class="gamelogo" id="tableLogo" alt="Shadow Escape"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('covidDiv', 'mySlides7', 'dot7');"><img src="images/covidheroes/covidHeroesLogo.png" class="gamelogo" id="tableLogo" alt="Covid Heroes"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('repeaterDiv', 'mySlides10', 'dot10');"><img src="images/RepeaterLogo1.png" class="gamelogo" id="tableLogo" alt="Repeater"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('meliorateDiv', 'mySlides8', 'dot8');"><img src="images/meliorateLogo.png" class="gamelogo" id="tableLogo" alt="Meliorate"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('argeliaDiv', 'mySlides4', 'dot4');"><img src="images/argeliaLogo.png" class="gamelogo" id="tableLogo" alt="Argelia"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('rumbleKingDiv', 'mySlides12', 'dot12');"><img src="images/rumbleKingLogo.png" class="gamelogo" id="tableLogo" alt="Rumble King"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('hopeDiv', 'mySlides3', 'dot3');"><img src="images/hopeLogo.png" class="gamelogo" id="tableLogo" alt="Hope"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('othersideDiv', 'mySlides9', 'dot9');"><img src="images/othersideLogo.png" class="gamelogo" id="tableLogo" alt="Otherside"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('dandelionDiv', 'mySlides5', 'dot5');"><img src="images/dandeLogo.png" class="gamelogo" id="tableLogo" alt="Dandelion"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('ironrunDiv', 'mySlides11', 'dot11');"><img src="images/ironRunLogo1.png" class="gamelogo" id="tableLogo" alt="Iron Run"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24Div', 'mySlides2', 'dot2');"><img src="images/24Logo.png" class="gamelogo" id="tableLogo" alt="24"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('bounceballDiv', 'mySlides', 'dot');"><img src="images/bounceBallLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
     </div>
-    <br>
 </div>
-<script>
-    window.onload = showDiv('bounceballDiv')
-</script>
+
+<div class="container">
+    <br><br>
+    <h3 class="bigFont text-left text-dark">Check my Games!</h3>
+    <h4>I love to create simple yet unique games!</h4>
+    <p>
+        Below, you will see a lot of games that i made so far, from mobile games to PC games.
+        Hover each card and click <strong>More..</strong> to jump directly to its detailed screenshots and information.
+    </p>
+    <div class="row">
+        <div class="col-sm">
+            <br>
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/shadowEscapeBGDark.jpg" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Shadow Escape</div>
+                    <p class="imageDesc">Best Game Design Compfest 13 Indie Game Ignite</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('shadowDiv', 'mySlides6', 'dot6')">More..</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/covidheroes.png" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">Covid Heroes</div>
+                            <p class="imageDesc">Finalist of GEMASTIK Game Development Competition</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('covidDiv', 'mySlides7', 'dot7')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/repeater.png" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">Repeater</div>
+                            <p class="imageDesc">A Simple puzzle game about repeating moves</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('repeaterDiv', 'mySlides10', 'dot10')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/meliorate.png" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Meliorate</div>
+                    <p class="imageDesc">Best Technological Award Compfest 14 Indie Game Ignite</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('meliorateDiv', 'mySlides8', 'dot8')">More..</button>
+                </div>
+            </div>
+            <br>
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/terapung.png" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Argelia</div>
+                    <p class="imageDesc">3rd Place of CODIG 3.0 Game Development Competition</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('argeliaDiv', 'mySlides4', 'dot4')">More..</button>
+                </div>
+            </div>
+            <br>
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/rumblekingBanner.png" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Rumble King</div>
+                    <p class="imageDesc">My first ever multiplayer game</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('rumbleKingDiv', 'mySlides12', 'dot12')">More..</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/hope.png" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">Hope</div>
+                            <p class="imageDesc">1st Place of CREDIA.ID Game Development Competition</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('hopeDiv', 'mySlides3', 'dot3')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/otherside.jpg" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">Otherside</div>
+                            <p class="imageDesc">Sunday's Choice Hyper Casual Jam Competition</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('othersideDiv', 'mySlides9', 'dot9')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/dandelion.jpg" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Dandelion</div>
+                    <p class="imageDesc">Finalist of MAGE 6 Game Development Competition</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('dandelionDiv', 'mySlides5', 'dot5')">More..</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/ironRun.png" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">Iron Run</div>
+                            <p class="imageDesc">A Runner game about ironing clothes</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('ironrunDiv', 'mySlides11', 'dot11')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-sm">
+                    <div class="image ">
+                        <img class="imgGame btn-round" src="images/24.png" style="width:100%">
+                        <div class="imageOverlay btn-round">
+                            <div class="imageTitle">24!</div>
+                            <p class="imageDesc">My Second Published Game</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24Div', 'mySlides2', 'dot2')">More..</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <div class="image ">
+                <img class="imgGame btn-round" src="images/bounceball.png" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="imageTitle">Bounce Ball</div>
+                    <p class="imageDesc">My First Ever Published Game</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('bounceballDiv', 'mySlides', 'dot')">More..</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+<!-- game detail modal -->
+<div class="modal fade" id="gameDetailModal" tabindex="-1" role="dialog" aria-labelledby="gameDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+        <div class="modal-content bg-cream">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gameDetailModalLabel">Game Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 <!-- bounceball -->
 <div class="container" id="bounceballDiv" style="display: none;" class="answer_list">
     <br>
@@ -859,10 +1013,10 @@
 
             <!-- The dots/circles -->
             <div style="text-align:center">
-                <span class="dot11" onclick="currentSlide(1, 'mySlides12', 'dot12')"></span>
-                <span class="dot11" onclick="currentSlide(2, 'mySlides12', 'dot12')"></span>
-                <span class="dot11" onclick="currentSlide(3, 'mySlides12', 'dot12')"></span>
-                <span class="dot11" onclick="currentSlide(4, 'mySlides12', 'dot12')"></span>
+                <span class="dot12" onclick="currentSlide(1, 'mySlides12', 'dot12')"></span>
+                <span class="dot12" onclick="currentSlide(2, 'mySlides12', 'dot12')"></span>
+                <span class="dot12" onclick="currentSlide(3, 'mySlides12', 'dot12')"></span>
+                <span class="dot12" onclick="currentSlide(4, 'mySlides12', 'dot12')"></span>
                 <!-- <span class="dot11" onclick="currentSlide(4, 'mySlides11', 'dot11')"></span>
                 <span class="dot11" onclick="currentSlide(5, 'mySlides11', 'dot11')"></span> -->
             </div>
@@ -888,10 +1042,10 @@
         </div>
     </div>
 
-    <script>
-        window.onload = showDiv('bounceballDiv')
-        window.onload = currentSlide(1, 'mySlides', 'dot')
-    </script>
+        </div>
+    </div>
+</div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
