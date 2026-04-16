@@ -621,7 +621,7 @@ html {
     width: auto;
     height: 175px;
     border-radius: 16px;
-    background-color: #ffffff;
+    background-color: #fcf2e5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -629,12 +629,12 @@ html {
 }
 
 .rk-character-info {
-    flex: 0 0 60%;
+    flex: 0 0 55%;
 }
 
 .rk-character-image {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 150%;
+    max-height: 150%;
     width: auto;
     height: auto;
 }
