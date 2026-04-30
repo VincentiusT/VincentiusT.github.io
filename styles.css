@@ -205,6 +205,40 @@ html {
     animation-timing-function: ease-in-out;
 }
 
+.scroll-hint-wrap {
+    margin-top: 18px;
+}
+
+.scroll-hint-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.scroll-hint-text {
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.scroll-hint-arrow {
+    display: inline-block;
+    width: 28px;
+    height: auto;
+    animation: floatDown 1.4s ease-in-out infinite;
+}
+
+@keyframes floatDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.65;
+    }
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
 /* @keyframes animate{
     0%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
     17%{background-image: url(images/ArtbrdArtboard\ 1Story.jpg);}
@@ -428,7 +462,7 @@ html {
 }
 
 /* Hide the images by default */
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12{
+.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12, .mySlides13, .mySlides14{
   display: none;
 }
 
@@ -480,7 +514,7 @@ html {
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11, .dot12 {
+.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11, .dot12, .dot13, .dot14 {
   cursor: pointer;
   height: 15px;
   width: 15px;
