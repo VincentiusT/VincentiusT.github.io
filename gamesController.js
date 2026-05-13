@@ -1,67 +1,98 @@
-function showDiv(id) {
-    document.getElementById(id).style.display = "block";
-}
- 
-function hideDiv(id) {
-    document.getElementById(id).style.display = "none";
-}
+(function () {
+    "use strict";
 
-function hideAll(){
-    document.getElementById("bounceballDiv").style.display = "none";
-    document.getElementById("24Div").style.display = "none";
-    document.getElementById("hopeDiv").style.display = "none";
-    document.getElementById("argeliaDiv").style.display = "none";
-    document.getElementById("dandelionDiv").style.display = "none";
-    document.getElementById("shadowDiv").style.display = "none";
-    document.getElementById("covidDiv").style.display = "none";
-    document.getElementById("meliorateDiv").style.display = "none";
-    document.getElementById("othersideDiv").style.display = "none";
-    document.getElementById("repeaterDiv").style.display = "none";
-    document.getElementById("ironrunDiv").style.display = "none";
-    document.getElementById("rumbleKingDiv").style.display = "none";
-    document.getElementById("24RemasterDiv").style.display = "none";
-    document.getElementById("24MadnessDiv").style.display = "none";
-}
-
-function openGameDetail(detailId, slideClass, dotClass) {
-    hideAll();
-    showDiv(detailId);
-    currentSlide(1, slideClass, dotClass);
-
-    if (typeof window.jQuery !== "undefined") {
-        window.jQuery("#gameDetailModal").modal("show");
+    function hideAll() {
+        var modal = document.getElementById("gameDetailModal");
+        if (!modal) {
+            return;
+        }
+        var panels = modal.querySelectorAll(".modal-body > div.container[id]");
+        for (var i = 0; i < panels.length; i++) {
+            panels[i].style.display = "none";
+        }
     }
-}
 
- var slideIndex = 1;
-showSlides(slideIndex);
+    function getSlideshowRoot(el) {
+        return el && el.closest ? el.closest("[data-game-slideshow]") : null;
+    }
 
-// Next/previous controls
-function plusSlides(n, id, dotid) {
-  showSlides(slideIndex += n, id, dotid);
-}
+    function showSlidesForRoot(root, index) {
+        if (!root) {
+            return;
+        }
+        var slides = root.querySelectorAll(".game-slide");
+        var dots = root.querySelectorAll(".game-slide-dot");
+        var n = slides.length;
+        if (n === 0) {
+            return;
+        }
+        var i = ((index % n) + n) % n;
+        root.dataset.slideIndex = String(i);
+        for (var j = 0; j < n; j++) {
+            slides[j].style.display = j === i ? "block" : "none";
+        }
+        for (var k = 0; k < dots.length; k++) {
+            if (dots[k].classList) {
+                dots[k].classList.toggle("active", k === i);
+            }
+        }
+    }
 
-// Thumbnail image controls
-function currentSlide(n, id, dotid) {
-  showSlides(slideIndex = n, id, dotid);
-}
+    function resetSlideshowsInPanel(panelEl) {
+        if (!panelEl) {
+            return;
+        }
+        var roots = panelEl.querySelectorAll("[data-game-slideshow]");
+        for (var r = 0; r < roots.length; r++) {
+            showSlidesForRoot(roots[r], 0);
+        }
+    }
 
-function showSlides(n, id, dotid) {
-  var i;
-  var slides = document.getElementsByClassName(id);
-  var dots = document.getElementsByClassName(dotid);
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+    window.gameSlideNav = function (el, delta) {
+        var root = getSlideshowRoot(el);
+        if (!root) {
+            return;
+        }
+        var slides = root.querySelectorAll(".game-slide");
+        var cur = parseInt(root.dataset.slideIndex || "0", 10);
+        if (isNaN(cur)) {
+            cur = 0;
+        }
+        var next = cur + delta;
+        if (next >= slides.length) {
+            next = 0;
+        }
+        if (next < 0) {
+            next = slides.length - 1;
+        }
+        showSlidesForRoot(root, next);
+    };
 
-window.onload = function () {
-    hideAll();
-};
+    window.gameSlideGo = function (el) {
+        var root = getSlideshowRoot(el);
+        if (!root) {
+            return;
+        }
+        var idx = parseInt(el.getAttribute("data-slide"), 10);
+        if (isNaN(idx)) {
+            return;
+        }
+        showSlidesForRoot(root, idx);
+    };
+
+    window.openGameDetail = function (detailId) {
+        hideAll();
+        var panel = document.getElementById(detailId);
+        if (panel) {
+            panel.style.display = "block";
+            resetSlideshowsInPanel(panel);
+        }
+        if (typeof window.jQuery !== "undefined") {
+            window.jQuery("#gameDetailModal").modal("show");
+        }
+    };
+
+    window.onload = function () {
+        hideAll();
+    };
+})();

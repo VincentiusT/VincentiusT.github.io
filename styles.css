@@ -461,8 +461,8 @@ html {
   margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11, .mySlides12, .mySlides13, .mySlides14{
+/* Hide slides by default; JS shows active slide inside [data-game-slideshow] */
+.game-slide {
   display: none;
 }
 
@@ -513,8 +513,8 @@ html {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11, .dot12, .dot13, .dot14 {
+/* Slideshow dot indicators */
+.game-slide-dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -525,7 +525,7 @@ html {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active, .game-slide-dot:hover {
   background-color: #717171;
 }
 
