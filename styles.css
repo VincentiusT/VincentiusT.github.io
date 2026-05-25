@@ -1,5 +1,11 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 #section-top{
@@ -65,7 +71,9 @@ html {
 }
 
 #journeyLogo2 {
-    max-width: 400px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -78,7 +86,8 @@ html {
 #journeyAgate {
     max-width: 90%;
     max-height: 300px;
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -40px;
 }
 
@@ -92,9 +101,22 @@ html {
     transition: transform 0.25s;
 }
 
-.journeyImage:hover {
-    transform: scale(1.1);
-    transition: transform 0.25s;
+@media (hover: hover) and (pointer: fine) {
+    .journeyImage:hover {
+        transform: scale(1.1);
+        transition: transform 0.25s;
+    }
+}
+
+.journeyGuestPhotos {
+    margin-top: 1rem;
+}
+
+.journeyGuestPhoto {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 
@@ -120,8 +142,15 @@ html {
     margin-right: auto;
 }
 
-.minWidthMedium{
-    min-width:400px;
+.minWidthMedium {
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .minWidthMedium {
+        min-width: 400px;
+    }
 }
 
 .imageflex {
@@ -156,6 +185,19 @@ html {
 
 .extraLongPadding {
     padding: 25px;
+}
+
+.bg-light.btn-round.extraLongPadding {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+img,
+picture,
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 .extraHorizontalMargin {
@@ -456,9 +498,11 @@ html {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
 /* Hide slides by default; JS shows active slide inside [data-game-slideshow] */
@@ -560,6 +604,8 @@ html {
 .rk-gameplay-wrap {
     position: relative;
     padding: 0 52px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .rk-gameplay-grid {
@@ -667,8 +713,8 @@ html {
 }
 
 .rk-character-image {
-    max-width: 150%;
-    max-height: 150%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
 }
@@ -686,10 +732,122 @@ html {
     color: #333333;
 }
 
+/* Games page logo strip */
+.game-logo-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    max-width: 100%;
+}
+
+[class*="col-"] {
+    min-width: 0;
+}
+
+.modal-body > .container[id] {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 991.98px) {
+    .bigFont {
+        font-size: 2rem;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    .medFont {
+        font-size: 1.1rem;
+    }
+
+    .imageTitle {
+        font-size: 1.35rem;
+    }
+
+    .imageDesc {
+        font-size: 1rem;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    #journeyAgate {
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    #journeyHalfbrick,
+    #journeyBeware {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #rumbleKingLogoBig {
+        margin-top: 4rem;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .gamelogo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .extraLongPadding {
+        padding: 16px;
+    }
+
+    .tag {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .slideshow-container[style*="width: 60%"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .prev,
+    .next {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 575px) {
+    .navbar {
+        padding-left: 56px;
+        padding-right: 10px;
+    }
+
+    .navbar-left .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .navbar-left .h5 {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
     #rumbleKingLogo {
         height: 30px;
         max-width: 140px;
+    }
+
+    .gamelogo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .btn-gamelogo {
+        padding: 0.2rem;
     }
 
     .rk-gameplay-grid {
