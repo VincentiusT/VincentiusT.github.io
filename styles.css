@@ -27,6 +27,87 @@ body {
     position: absolute;
 }
 
+.navbar.navbar--await-reveal {
+    position: relative;
+    z-index: 100000;
+}
+
+.navbar--await-reveal:not(.navbar--loader-complete) #navbarLogo {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navbar--await-reveal .navbar-left .nav-item,
+.navbar--await-reveal #navbarMenu .nav-item {
+    position: relative;
+    z-index: 100001;
+    display: block;
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar--await-reveal .navbar-toggler {
+    position: relative;
+    z-index: 100001;
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-toggler {
+        display: none !important;
+    }
+}
+
+.navbar--await-reveal.navbar--revealed .navbar-left .nav-item,
+.navbar--await-reveal.navbar--revealed .navbar-toggler,
+.navbar--await-reveal.navbar--revealed #navbarMenu .nav-item {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar--await-reveal.navbar--revealed .navbar-left .nav-item:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.navbar--await-reveal.navbar--revealed .navbar-left .nav-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.navbar--await-reveal.navbar--revealed .navbar-toggler {
+    transition-delay: 0.1s;
+}
+
+.navbar--await-reveal.navbar--revealed #navbarMenu .nav-item:nth-child(1) {
+    transition-delay: 0.12s;
+}
+
+.navbar--await-reveal.navbar--revealed #navbarMenu .nav-item:nth-child(2) {
+    transition-delay: 0.19s;
+}
+
+.navbar--await-reveal.navbar--revealed #navbarMenu .nav-item:nth-child(3) {
+    transition-delay: 0.26s;
+}
+
+.navbar--await-reveal.navbar--revealed #navbarMenu .nav-item:nth-child(4) {
+    transition-delay: 0.33s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar--await-reveal .navbar-left .nav-item,
+    .navbar--await-reveal .navbar-toggler,
+    .navbar--await-reveal #navbarMenu .nav-item {
+        transform: none;
+        opacity: 1;
+        transition: none;
+    }
+}
+
 #rumbleKingChar {
     max-width: 260px;
     transition: transform 0.25s;
@@ -279,6 +360,61 @@ video {
         transform: translateY(8px);
         opacity: 1;
     }
+}
+
+body.is-loading {
+    overflow: hidden;
+}
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#loading-screen-logo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: auto;
+    z-index: 100002;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: floatLogo 2.5s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+html.loading-skip #loading-screen,
+html.loading-skip #loading-screen-logo {
+    display: none;
+}
+
+html.loading-skip body.is-loading {
+    overflow: auto;
+}
+
+html.loading-skip .navbar--await-reveal:not(.navbar--loader-complete) #navbarLogo {
+    visibility: visible;
+    opacity: 1;
+}
+
+html.loading-skip .navbar--await-reveal .navbar-left .nav-item,
+html.loading-skip .navbar--await-reveal #navbarMenu .nav-item,
+html.loading-skip .navbar--await-reveal .navbar-toggler {
+    transform: translateY(0);
+    opacity: 1;
+    transition: none;
 }
 
 /* @keyframes animate{
@@ -605,7 +741,6 @@ video {
     position: relative;
     padding: 0 52px;
     max-width: 100%;
-    overflow: hidden;
 }
 
 .rk-gameplay-grid {
@@ -629,15 +764,16 @@ video {
 .rk-gameplay-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    background-color: #000000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .rk-gameplay-item {
     flex: 0 0 720px;
     width: 720px;
-    height: 432px;
+    height: auto;
+    aspect-ratio: 1920 / 862;
     scroll-snap-align: center;
     position: relative;
     transform: scale(1);
@@ -829,11 +965,18 @@ video {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-content: flex-start;
+        line-height: 1.1;
+    }
+
+    .navbar-left .nav-item:last-child {
+        flex-basis: 100%;
     }
 
     .navbar-left .h5 {
         font-size: 0.95rem;
         margin-bottom: 0;
+        line-height: 1.1;
     }
 
     #rumbleKingLogo {
@@ -863,7 +1006,7 @@ video {
         flex: 0 0 92%;
         width: 92%;
         height: auto;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1920 / 862;
     }
 
     .rk-gameplay-item.rk-gameplay-focus {
@@ -898,7 +1041,7 @@ video {
         flex: 0 0 78%;
         width: 78%;
         height: auto;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1920 / 862;
     }
 
     .rk-gameplay-item.rk-gameplay-focus {
