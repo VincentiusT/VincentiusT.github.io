@@ -443,15 +443,19 @@ video {
 }
 
 .outline{
-    outline: auto;
+    border: 1px solid #fff;
+    outline: none;
 }
 
 .btn.outline:hover,
-.btn.outline:focus {
+.btn.outline:focus,
+.btn.outline:active {
     background-color: white;
     color: #d65f5f;
     font-weight: 700;
     border-color: white;
+    outline: none;
+    box-shadow: none;
 }
 
 .strokeOrange {
@@ -891,6 +895,10 @@ video {
 }
 
 @media (max-width: 991.98px) {
+    .myGameDecor {
+        display: none;
+    }
+
     .bigFont {
         font-size: 2rem;
         line-height: 1.2;
