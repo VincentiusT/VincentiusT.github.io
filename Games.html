@@ -59,19 +59,20 @@
 
 <div class="bg-black">
     <div class="container text-center py-3 game-logo-strip">
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('llamaLizardDiv');"><img src="images/LlamaLizard/Logo-whiteborder.png" class="gamelogo" id="tableLogo" alt="Llama and Lizard"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('shadowDiv');"><img src="images/shadowEscapeLogo.png" class="gamelogo" id="tableLogo" alt="Shadow Escape"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('covidDiv');"><img src="images/covidheroes/covidHeroesLogo.png" class="gamelogo" id="tableLogo" alt="Covid Heroes"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('repeaterDiv');"><img src="images/RepeaterLogo1.png" class="gamelogo" id="tableLogo" alt="Repeater"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('meliorateDiv');"><img src="images/meliorateLogo.png" class="gamelogo" id="tableLogo" alt="Meliorate"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('argeliaDiv');"><img src="images/argeliaLogo.png" class="gamelogo" id="tableLogo" alt="Argelia"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('rumbleKingDiv');"><img src="images/rumbleKingLogo.png" class="gamelogo" id="tableLogo" alt="Rumble King"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('hopeDiv');"><img src="images/hopeLogo.png" class="gamelogo" id="tableLogo" alt="Hope"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('othersideDiv');"><img src="images/othersideLogo.png" class="gamelogo" id="tableLogo" alt="Otherside"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24MadnessDiv');"><img src="images/24Madness/24MadnessLogo.png" class="gamelogo" id="tableLogo" alt="24 Madness"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24RemasterDiv');"><img src="images/24Remaster/gameIcon.png" class="gamelogo" id="tableLogo" alt="24: The Game"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('dandelionDiv');"><img src="images/dandeLogo.png" class="gamelogo" id="tableLogo" alt="Dandelion"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('ironrunDiv');"><img src="images/ironRunLogo1.png" class="gamelogo" id="tableLogo" alt="Iron Run"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24Div');"><img src="images/24Logo.png" class="gamelogo" id="tableLogo" alt="24"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24RemasterDiv');"><img src="images/24Remaster/gameIcon.png" class="gamelogo" id="tableLogo" alt="24: The Game"> </button>
-        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('24MadnessDiv');"><img src="images/24Madness/24MadnessLogo.png" class="gamelogo" id="tableLogo" alt="24 Madness"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('othersideDiv');"><img src="images/othersideLogo.png" class="gamelogo" id="tableLogo" alt="Otherside"> </button>
+        <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('hopeDiv');"><img src="images/hopeLogo.png" class="gamelogo" id="tableLogo" alt="Hope"> </button>
         <button class="btn-gamelogo btn" name="answer" value="Show Div" onclick="openGameDetail('bounceballDiv');"><img src="images/bounceBallLogo.png" class="gamelogo" id="tableLogo" alt="Bounce Ball"> </button>
     </div>
 </div>
@@ -87,8 +88,19 @@
         <div class="col-sm">
             <br>
             <div class="image ">
+                <img class="imgGame btn-round" src="images/LlamaLizard/LlamaLizardCover.png" style="width:100%">
+                <div class="imageOverlay btn-round">
+                    <div class="game-year">2026</div>
+                    <div class="imageTitle">Llama and Lizard</div>
+                    <p class="imageDesc">Online Co-op game!</p>
+                    <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('llamaLizardDiv')">More..</button>
+                </div>
+            </div>
+            <br>
+            <div class="image ">
                 <img class="imgGame btn-round" src="images/shadowEscapeBGDark.jpg" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2020</div>
                     <div class="imageTitle">Shadow Escape</div>
                     <p class="imageDesc">Best Game Design Compfest 13 Indie Game Ignite</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('shadowDiv')">More..</button>
@@ -100,6 +112,7 @@
                     <div class="image ">
                         <img class="imgGame btn-round" src="images/covidheroes.png" style="width:100%">
                         <div class="imageOverlay btn-round">
+                            <div class="game-year">2021</div>
                             <div class="imageTitle">Covid Heroes</div>
                             <p class="imageDesc">Finalist of GEMASTIK Game Development Competition</p>
                             <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('covidDiv')">More..</button>
@@ -112,6 +125,7 @@
                     <div class="image ">
                         <img class="imgGame btn-round" src="images/repeater.png" style="width:100%">
                         <div class="imageOverlay btn-round">
+                            <div class="game-year">2022</div>
                             <div class="imageTitle">Repeater</div>
                             <p class="imageDesc">A Simple puzzle game about repeating moves</p>
                             <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('repeaterDiv')">More..</button>
@@ -124,6 +138,7 @@
             <div class="image ">
                 <img class="imgGame btn-round" src="images/meliorate.png" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2021</div>
                     <div class="imageTitle">Meliorate</div>
                     <p class="imageDesc">Best Technological Award Compfest 14 Indie Game Ignite</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('meliorateDiv')">More..</button>
@@ -136,6 +151,7 @@
                     <div class="image ">
                         <img class="imgGame btn-round" src="images/ironRun.png" style="width:100%">
                         <div class="imageOverlay btn-round">
+                            <div class="game-year">2022</div>
                             <div class="imageTitle">Iron Run</div>
                             <p class="imageDesc">A Runner game about ironing clothes</p>
                             <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('ironrunDiv')">More..</button>
@@ -147,6 +163,7 @@
                     <div class="image ">
                         <img class="imgGame btn-round" src="images/24.png" style="width:100%">
                         <div class="imageOverlay btn-round">
+                            <div class="game-year">2019</div>
                             <div class="imageTitle">24!</div>
                             <p class="imageDesc">My Second Published Game</p>
                             <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24Div')">More..</button>
@@ -158,6 +175,7 @@
             <div class="image ">
                 <img class="imgGame btn-round" src="images/terapung.png" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2020</div>
                     <div class="imageTitle">Argelia</div>
                     <p class="imageDesc">3rd Place of CODIG 3.0 Game Development Competition</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('argeliaDiv')">More..</button>
@@ -174,11 +192,12 @@
                 <div class="col-sm">
                     
                     <div class="image ">
-                        <img class="imgGame btn-round" src="images/hope.png" style="width:100%">
+                        <img class="imgGame btn-round" src="images/24Madness/SS3.jpg" style="width:100%">
                         <div class="imageOverlay btn-round">
-                            <div class="imageTitle">Hope</div>
-                            <p class="imageDesc">1st Place of CREDIA.ID Game Development Competition</p>
-                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('hopeDiv')">More..</button>
+                            <div class="game-year">2022</div>
+                            <div class="imageTitle">24 Madness</div>
+                            <p class="imageDesc">24 game but it's madness!</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24MadnessDiv')">More..</button>
                         </div>
                     </div>
                     <br>
@@ -186,11 +205,12 @@
 
                 <div class="col-sm">
                     <div class="image ">
-                        <img class="imgGame btn-round" src="images/otherside.jpg" style="width:100%">
+                        <img class="imgGame btn-round" src="images/24Remaster/SS1.png" style="width:100%">
                         <div class="imageOverlay btn-round">
-                            <div class="imageTitle">Otherside</div>
-                            <p class="imageDesc">Sunday's Choice Hyper Casual Jam Competition</p>
-                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('othersideDiv')">More..</button>
+                            <div class="game-year">2026</div>
+                            <div class="imageTitle">24: The Game</div>
+                            <p class="imageDesc">Remaster version of the game 24.</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24RemasterDiv')">More..</button>
                         </div>
                     </div>
                     <br>
@@ -200,6 +220,7 @@
             <div class="image ">
                 <img class="imgGame btn-round" src="images/rumblekingBanner.png" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2022</div>
                     <div class="imageTitle">Rumble King</div>
                     <p class="imageDesc">My first ever multiplayer game</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('rumbleKingDiv')">More..</button>
@@ -209,11 +230,12 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="image ">
-                        <img class="imgGame btn-round" src="images/24Remaster/SS1.png" style="width:100%">
+                        <img class="imgGame btn-round" src="images/otherside.jpg" style="width:100%">
                         <div class="imageOverlay btn-round">
-                            <div class="imageTitle">24: The Game</div>
-                            <p class="imageDesc">Remaster version of the game 24.</p>
-                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24RemasterDiv')">More..</button>
+                            <div class="game-year">2022</div>
+                            <div class="imageTitle">Otherside</div>
+                            <p class="imageDesc">Sunday's Choice Hyper Casual Jam Competition</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('othersideDiv')">More..</button>
                         </div>
                     </div>
                     <br>
@@ -221,11 +243,12 @@
 
                 <div class="col-sm">
                     <div class="image ">
-                        <img class="imgGame btn-round" src="images/24Madness/SS3.jpg" style="width:100%">
+                        <img class="imgGame btn-round" src="images/hope.png" style="width:100%">
                         <div class="imageOverlay btn-round">
-                            <div class="imageTitle">24 Madness</div>
-                            <p class="imageDesc">24 game but it's madness!</p>
-                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('24MadnessDiv')">More..</button>
+                            <div class="game-year">2019</div>
+                            <div class="imageTitle">Hope</div>
+                            <p class="imageDesc">1st Place of CREDIA.ID Game Development Competition</p>
+                            <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('hopeDiv')">More..</button>
                         </div>
                     </div>
                     <br>
@@ -235,6 +258,7 @@
             <div class="image ">
                 <img class="imgGame btn-round" src="images/bounceball.png" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2018</div>
                     <div class="imageTitle">Bounce Ball</div>
                     <p class="imageDesc">My First Ever Published Game</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('bounceballDiv')">More..</button>
@@ -244,6 +268,7 @@
             <div class="image ">
                 <img class="imgGame btn-round" src="images/dandelion.jpg" style="width:100%">
                 <div class="imageOverlay btn-round">
+                    <div class="game-year">2020</div>
                     <div class="imageTitle">Dandelion</div>
                     <p class="imageDesc">Finalist of MAGE 6 Game Development Competition</p>
                     <button type="button" class="btn btn-danger btn-round btn-lg" onclick="openGameDetail('dandelionDiv')">More..</button>
@@ -255,944 +280,731 @@
 </div>
 
 <!-- game detail modal -->
-<div class="modal fade" id="gameDetailModal" tabindex="-1" role="dialog" aria-labelledby="gameDetailModalLabel" aria-hidden="true">
+<div class="modal fade" id="gameDetailModal" tabindex="-1" role="dialog" aria-label="Game detail" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
         <div class="modal-content bg-cream">
-            <div class="modal-header">
-                <h5 class="modal-title" id="gameDetailModalLabel">Game Details</h5>
+            <div class="modal-header border-0 pb-0 justify-content-end">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-<!-- bounceball -->
-<div class="container" id="bounceballDiv" style="display: none;" class="answer_list">
+<!-- Llama and Lizard -->
+<div class="container" id="llamaLizardDiv" style="display:none;" class="answer_list">
+
     <br>
-    <h3 class="bigFont text-center">Bounce Ball</h3>
+    <p class="game-year text-center">2026</p>
+    <h3 class="bigFont text-center">Llama and Lizard</h3>
+    <h4 class="text-center text-muted">Online Co-op game!</h4>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/bounceball.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Co-op</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Online Multiplayer</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Rage game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">PC</p>
+        <p>
+            An online co-op game where you play as Llama and Lizard with 2 completely different mechanics, who needs each other to overcome obstacle and reach the same goal.
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/bounceball1.png" style="width:100%">
-                </div>
+        <p>
+            Start from Lizard and Llama who moves in completely different way,  Lizard who can shoot it's tongue and let Llama jump on it like a trampoline.. or Llama who can extend his neck to break objects. Cooperate together to solve puzzles that are impossible if you do it alone. 
+        </p>
+        <p> It's pretty absurd.. but it's cool!
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/bounceball2.png" style="width:100%">
-                </div>
+            The twist is combining 2D Platformer and Top-Down gameplay into a fresh cooperative experience, filled with puzzles that require teamwork between Llama and Lizard.</p>
+        <a href="https://youtu.be/dGFpPnxRdcc" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
+        <br>
+        <a href="https://bewaregames.itch.io/llama-and-lizard" target="_blank">
+        Play the prototype here
+        </a>
+    </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/bounceball3.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/bounceballBanner.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/LlamaLizard/SS/ss0.png" alt="Llama and Lizard screenshot 1">
         </div>
-        <div class="col-sm">
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A casual endless game about bouncing ball! Bounce your ball to the wall to get points, but don't forget to avoid all of the obstacles!
-                you can got superpower by bouncing your ball to the edge of the wall! Destroy the obstacles using that superpower and get more points!
-            </p>
-            <p>This is my first ever game that published in playstore! Not the best but i enjoyed making this!</p>
-            <a href="https://play.google.com/store/apps/details?id=com.beware.BounceBall&hl=en_US&gl=US" target="_blank">
-                <img src="images/download.png" id="downloadLogo" alt="download">
-            </a>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/LlamaLizard/SS/ss1.png" alt="Llama and Lizard screenshot 2">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/LlamaLizard/SS/ss2.png" alt="Llama and Lizard screenshot 3">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/LlamaLizard/SS/ss3.png" alt="Llama and Lizard screenshot 4">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/LlamaLizard/SS/ss4.png" alt="Llama and Lizard screenshot 5">
         </div>
     </div>
 
+</div>
+
+<!-- bounceball -->
+<div class="container" id="bounceballDiv" style="display: none;" class="answer_list">
+
+    <br>
+    <p class="game-year text-center">2018</p>
+    <h3 class="bigFont text-center">Bounce Ball</h3>
+    <br>
+
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A casual endless game about bouncing ball! Bounce your ball to the wall to get points, but don't forget to avoid all of the obstacles!
+        you can got superpower by bouncing your ball to the edge of the wall! Destroy the obstacles using that superpower and get more points!
+        </p>
+        <p>This is my first ever game that published in playstore! Not the best but i enjoyed making this!</p>
+        <a href="https://play.google.com/store/apps/details?id=com.beware.BounceBall&hl=en_US&gl=US" target="_blank">
+        <img src="images/download.png" id="downloadLogo" alt="download">
+        </a>
+    </div>
+
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/bounceball.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/bounceball1.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/bounceball2.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/bounceball3.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/bounceballBanner.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- 24! -->
 <div class="container" id="24Div" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2019</p>
     <h3 class="bigFont text-center">24!</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/241.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        This is a simple math game that makes people improve their skill and abilities at counting.
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/242.png" style="width:100%">
-                </div>
+        You'll given 4 random numbers and try to operate it using 4 operators addition(+) , subtraction(-) , multiplication (x) , and division (÷) until it become 24! That's all, this game is really this simple as it looks. But some number combinations may be difficult to solve.
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/243.png" style="width:100%">
-                </div>
+        <p>
+        There are 2 mode in this game,
+        </p>
+        <li>Casual mode, try to combine all the numbers to make 24, so you can go to the next level</li>
+        <li>Time limit, you have 45 second to combine all the numbers to make 24 and get points after solving it. You'll get higher points if you solve the problem faster. And be careful in this mode, the numbers not always can be solve! so you must click the "no-solution" button if it's impossible to solve.</li>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/244.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                This is a simple math game that makes people improve their skill and abilities at counting.
-
-                You'll given 4 random numbers and try to operate it using 4 operators addition(+) , subtraction(-) , multiplication (x) , and division (÷) until it become 24! That's all, this game is really this simple as it looks. But some number combinations may be difficult to solve.
-            </p>
-
-            <p>
-                There are 2 mode in this game,
-            </p>
-            <li>Casual mode, try to combine all the numbers to make 24, so you can go to the next level</li>
-            <li>Time limit, you have 45 second to combine all the numbers to make 24 and get points after solving it. You'll get higher points if you solve the problem faster. And be careful in this mode, the numbers not always can be solve! so you must click the "no-solution" button if it's impossible to solve.</li>
-
-
-            <a href="https://play.google.com/store/apps/details?id=com.Beware.game24&hl=en_US&gl=US" target="_blank">
-                <img src="images/download.png" id="downloadLogo" alt="download">
-            </a>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.Beware.game24&hl=en_US&gl=US" target="_blank">
+        <img src="images/download.png" id="downloadLogo" alt="download">
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/241.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/242.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/243.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/244.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Hope -->
 <div class="container" id="hopeDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2019</p>
     <h3 class="bigFont text-center">Hope</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/hope/hope1.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/hope/hope2.jpg" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">1st Place on CREDIA.ID Game Development Competition</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        Help poor Oozy out from this deep hole. Drag and let Oozy hop! Oozy can stick to the ground, even if he is upside down!
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/hope/sd.png" style="width:100%">
-                </div>
+        <p>
+        But be careful! There are a lot of obstacle waiting for Oozy. Some obstacles can make Oozy burn, some can gobble Oozy and other can make Oozy pop!
+        </p>
+        <p>Get as high as you can! there are various biome up there such as lava biome, fossil biome, ground biome, and tree biome that get more challenging every time.</p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/hope/hope5.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/hope/hope6.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">1st Place on CREDIA.ID Game Development Competition</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                Help poor Oozy out from this deep hole. Drag and let Oozy hop! Oozy can stick to the ground, even if he is upside down!
-            </p>
-
-            <p>
-                But be careful! There are a lot of obstacle waiting for Oozy. Some obstacles can make Oozy burn, some can gobble Oozy and other can make Oozy pop!
-            </p>
-            <p>Get as high as you can! there are various biome up there such as lava biome, fossil biome, ground biome, and tree biome that get more challenging every time.</p>
-
-            <a href="https://play.google.com/store/apps/details?id=com.Beware.Hope&hl=en_US&gl=US" target="_blank">
-                <img src="images/download.png" id="downloadLogo" alt="download">
-            </a>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.Beware.Hope&hl=en_US&gl=US" target="_blank">
+        <img src="images/download.png" id="downloadLogo" alt="download">
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/hope/hope1.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/hope/hope2.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/hope/sd.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/hope/hope5.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/hope/hope6.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Argelia -->
 <div class="container" id="argeliaDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2020</p>
     <h3 class="bigFont text-center">Argelia</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/argelia/1.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/argelia/2.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">3rd Place on CODIG 3.0 Game Development Competition</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        Argelia, a simple game about cultures in Indonesia.
+        </p>
+        <p>
+        Learn different 14 cultures in Indonesia with various gameplay and minigames. Each gameplay has different mechanic so player won't easily get bored!
+        </p>
+        <p>Unlock all the achievement and tribal book to learn more about the cultures!</p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/argelia/3.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/argelia/4.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/argelia/5.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">3rd Place on CODIG 3.0 Game Development Competition</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                Argelia, a simple game about cultures in Indonesia.
-            </p>
-            <p>
-                Learn different 14 cultures in Indonesia with various gameplay and minigames. Each gameplay has different mechanic so player won't easily get bored!
-            </p>
-            <p>Unlock all the achievement and tribal book to learn more about the cultures!</p>
-
-            <a href="https://www.youtube.com/watch?v=sa1lrKIhG_M" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on youtube
-            </a>
-
-        </div>
+        <a href="https://www.youtube.com/watch?v=sa1lrKIhG_M" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/argelia/1.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/argelia/2.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/argelia/3.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/argelia/4.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/argelia/5.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Dandelion -->
 <div class="container" id="dandelionDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2020</p>
     <h3 class="bigFont text-center">Dandelion</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/dandelion/1.jpg" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/dandelion/2.jpg" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">Finalist on Mage 6 Game Development Competition</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>Travel as a Dandelion, enjoy the beautiful scenery with relaxing music.</p>
+        <p>solve the puzzle with blowing the dandelion away from danger like wind, bird, and paper plane. take care of the dandelion so it can reach fertile soil and grow up into mature dandelion.</p>
+        <p>Has multiple levels with different background and scenery to enjoy!</p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/dandelion/3.jpg" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/dandelion/4.jpg" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/dandelion/5.jpg" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">Finalist on Mage 6 Game Development Competition</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>Travel as a Dandelion, enjoy the beautiful scenery with relaxing music.</p>
-            <p>solve the puzzle with blowing the dandelion away from danger like wind, bird, and paper plane. take care of the dandelion so it can reach fertile soil and grow up into mature dandelion.</p>
-            <p>Has multiple levels with different background and scenery to enjoy!</p>
-
-            <a href="https://www.youtube.com/watch?v=4x_M3001KvY&t=100s" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on youtube
-            </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=4x_M3001KvY&t=100s" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/dandelion/1.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/dandelion/2.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/dandelion/3.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/dandelion/4.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/dandelion/5.jpg" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Shadow Escape -->
 <div class="container" id="shadowDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2020</p>
     <h3 class="bigFont text-center">Shadow Escape</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/shadow/messageImage_1636446124510.jpg" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/shadow/messageImage_1636446136498.jpg" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">Best Game Design on COMPFEST 12 Indie Game Ignite</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>a puzzle game with unique mechanic, play in top down view and platformer view at the same time!</p>
+        <p>a boy who is kidnapped by a mysterious scientist, got a shadow power because the experiment was failed. Help him to go out of the lab by avoiding all of the obstacle using his shadow power.</p>
+        <p>The base view is top down, but when you control your shadow, the view changes into platformer.</p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/shadow/messageImage_1636446166826.jpg" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/shadow/messageImage_1636446186112.jpg" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/shadow/messageImage_1636446214068.jpg" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">Best Game Design on COMPFEST 12 Indie Game Ignite</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>a puzzle game with unique mechanic, play in top down view and platformer view at the same time!</p>
-            <p>a boy who is kidnapped by a mysterious scientist, got a shadow power because the experiment was failed. Help him to go out of the lab by avoiding all of the obstacle using his shadow power.</p>
-            <p>The base view is top down, but when you control your shadow, the view changes into platformer.</p>
-
-            <a href="https://www.youtube.com/watch?v=NxYtx0PjF8k&t=47s" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on youtube
-            </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=NxYtx0PjF8k&t=47s" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/shadow/messageImage_1636446124510.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/shadow/messageImage_1636446136498.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/shadow/messageImage_1636446166826.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/shadow/messageImage_1636446186112.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/shadow/messageImage_1636446214068.jpg" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Covid Heroes -->
 <div class="container" id="covidDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2021</p>
     <h3 class="bigFont text-center">Covid Heroes</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/covidheroes/gameplayFix_bottomLeft.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/covidheroes/gameplayFix_bottomRight.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">Finalist on GEMASTIK 14 Game Development Competition</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Simulation</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Tapper</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A simulation game about handling Covid-19 in cities in Indonesia.
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/covidheroes/gameplayFix_middle.png" style="width:100%">
-                </div>
+        <p>
+        You as a covid task force, need to help all of the cities in Indonesia from Covid-19. Build hospital, vaccination place, officer place, pharmacy, and even make policies to help fight Covid.
+        </p>
+        <p>There are 9 different cities to save start from Serang to Jakarta!</p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/covidheroes/menuFix_bottomRight.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/covidheroes/ss4.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">Finalist on GEMASTIK 14 Game Development Competition</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Simulation</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Tapper</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A simulation game about handling Covid-19 in cities in Indonesia.
-            </p>
-
-            <p>
-                You as a covid task force, need to help all of the cities in Indonesia from Covid-19. Build hospital, vaccination place, officer place, pharmacy, and even make policies to help fight Covid.
-            </p>
-            <p>There are 9 different cities to save start from Serang to Jakarta!</p>
-
-            <a href="https://www.youtube.com/watch?v=uRQD-dwQRzM&t=29s" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on youtube
-            </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=uRQD-dwQRzM&t=29s" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/covidheroes/gameplayFix_bottomLeft.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/covidheroes/gameplayFix_bottomRight.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/covidheroes/gameplayFix_middle.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/covidheroes/menuFix_bottomRight.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/covidheroes/ss4.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Meliorate -->
 <div class="container" id="meliorateDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2021</p>
     <h3 class="bigFont text-center">Meliorate</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/meliorate/Bg.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/meliorate/Bg4.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">Best Technological Award on COMPFEST 13 Indie Game Ignite</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">PC Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Story</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>a puzzle story based game about mental health problem, about Jack, he is broken inside. He is down bad mentally.</p>
+        <p>
+        all the scene are taken from jack's heart. In the beginning, the scene was black and white and full of ruins,
+        represents that jack is broken. he can't run, can't jump, can't interact, but he can stop time. try to avoid all of the obstacle
+        by stopping time. find jack's hand, leg, eye, and HEART so he can MELIORATE!
+        </p>
+        <p></p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/meliorate/Bg6.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/meliorate/Bg7.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/meliorate/Bg8.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">Best Technological Award on COMPFEST 13 Indie Game Ignite</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">PC Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Story</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>a puzzle story based game about mental health problem, about Jack, he is broken inside. He is down bad mentally.</p>
-            <p>
-                all the scene are taken from jack's heart. In the beginning, the scene was black and white and full of ruins,
-                represents that jack is broken. he can't run, can't jump, can't interact, but he can stop time. try to avoid all of the obstacle
-                by stopping time. find jack's hand, leg, eye, and HEART so he can MELIORATE!
-            </p>
-            <p></p>
-
-            <a href="https://www.youtube.com/watch?v=hwkoiOnvrRM" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on youtube
-            </a>
-        </div>
+        <a href="https://www.youtube.com/watch?v=hwkoiOnvrRM" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on youtube
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/meliorate/Bg.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/meliorate/Bg4.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/meliorate/Bg6.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/meliorate/Bg7.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/meliorate/Bg8.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Otherside -->
 <div class="container" id="othersideDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2022</p>
     <h3 class="bigFont text-center">Otherside</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/otherside/ss3.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/otherside/ss2.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <img class="piagamlogo" src="images/piagam.png" alt="piagam">
+        <strong style="color:navy">Sunday's Choice Nomination in GDBAY Hypercasual Jam Competition</strong>
+        <br><br>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Hypercasual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A endless game about "love is blind"
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/otherside/ss1.png" style="width:100%">
-                </div>
+        <p>
+        If you move, you cannot see the obstacles. You need to stay for a moment to see all of the obstacles around you
+        so you can avoid it!
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/otherside/ss4.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/otherside/ss5.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <img class="piagamlogo" src="images/piagam.png" alt="piagam">
-            <strong style="color:navy">Sunday's Choice Nomination in GDBAY Hypercasual Jam Competition</strong>
-            <br><br>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Hypercasual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A endless game about "love is blind"
-            </p>
-
-            <p>
-                If you move, you cannot see the obstacles. You need to stay for a moment to see all of the obstacles around you
-                so you can avoid it!
-            </p>
-
-            <a href="https://drive.google.com/file/d/1V2GXLctbZuH14JB-R-E9mnizGqcSK0KB/view?usp=sharing" target="_blank">
-                <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on Google Drive
-            </a>
-        </div>
+        <a href="https://drive.google.com/file/d/1V2GXLctbZuH14JB-R-E9mnizGqcSK0KB/view?usp=sharing" target="_blank">
+        <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on Google Drive
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/otherside/ss3.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/otherside/ss2.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/otherside/ss1.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/otherside/ss4.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/otherside/ss5.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Repeater -->
 <div class="container" id="repeaterDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2022</p>
     <h3 class="bigFont text-center">Repeater</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/1.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/2.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A game about repeating moves to solve the puzzle!
+        Make the cube touch the finish point using a predefined moves and repeat it over and over again.
+        </p>
+        <p>
+        *Joined Voodoo Spring Competition - Reach Prototype stage
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/4.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/5.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/6.png" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A game about repeating moves to solve the puzzle!
-                Make the cube touch the finish point using a predefined moves and repeat it over and over again.
-            </p>
-            <p>
-                *Joined Voodoo Spring Competition - Reach Prototype stage
-            </p>
-
-            <a href="https://play.google.com/store/apps/details?id=com.beware.repeater&hl=en&gl=US" target="_blank">
-                <img src="images/download.png" id="downloadLogo" alt="download">
-            </a>
-            <a href="https://drive.google.com/file/d/1hSlKFxzy6OPyhdJ4uRhLCTXxl0aTDCLv/view?usp=sharing" target="_blank">
-                <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on Google Drive
-            </a>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.beware.repeater&hl=en&gl=US" target="_blank">
+        <img src="images/download.png" id="downloadLogo" alt="download">
+        </a>
+        <a href="https://drive.google.com/file/d/1hSlKFxzy6OPyhdJ4uRhLCTXxl0aTDCLv/view?usp=sharing" target="_blank">
+        <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on Google Drive
+        </a>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/Repeater/1.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/Repeater/2.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/Repeater/4.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/Repeater/5.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/Repeater/6.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Iron Run -->
 <div class="container" id="ironrunDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2022</p>
     <h3 class="bigFont text-center">Iron Run</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="width: 60%;" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/ironrun/ss2.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/ironrun/ss3.png" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Hyoercasual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A game about Ironing Clothes, but with runner gameplay. You can add another iron to make ironing clothes easier,
+        and you need to avoid all of the obstacles in front of you!
+        </p>
+        <p>
+        *Joined Voodoo Spring Competition - Reach Prototype stage
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/ironrun/ss4.png" style="width:100%">
-                </div>
-
-                <!-- <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/5.png" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/Repeater/6.png" style="width:100%">
-                </div> -->
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <!-- <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span> -->
-            </div></div>
-        </div>
-        <div class="col-sm">
-
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Hyoercasual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A game about Ironing Clothes, but with runner gameplay. You can add another iron to make ironing clothes easier,
-                and you need to avoid all of the obstacles in front of you!
-            </p>
-            <p>
-                *Joined Voodoo Spring Competition - Reach Prototype stage
-            </p>
-
-            <a href="https://play.google.com/store/apps/details?id=com.beware.ironrun&hl=en&gl=US" target="_blank">
-                <img src="images/download.png" id="downloadLogo" alt="download">
-            </a>
-            <a href="https://drive.google.com/file/d/18j-3dseRFEiTgGUIY_rQB394EFOzUj_v/view?usp=sharing" target="_blank">
-                <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on Google Drive
-            </a>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.beware.ironrun&hl=en&gl=US" target="_blank">
+        <img src="images/download.png" id="downloadLogo" alt="download">
+        </a>
+        <a href="https://drive.google.com/file/d/18j-3dseRFEiTgGUIY_rQB394EFOzUj_v/view?usp=sharing" target="_blank">
+        <img src="images/Google_Drive_logo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on Google Drive
+        </a>
     </div>
 
-
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/ironrun/ss2.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/ironrun/ss3.png" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/ironrun/ss4.png" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- Rumble King -->
 <div class="container" id="rumbleKingDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2022</p>
     <h3 class="bigFont text-center">Rumble King</h3>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" data-game-slideshow>
-                <!-- Full-width images with number and caption text -->
-                <div class="game-slide">
-                    <img class="btn-round" src="images/rumbleking/ss1.png" style="width:100%">
-                </div>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/rumbleking/ss3.jpg" style="width:100%">
-                </div>
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Topdown shooter</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Multiplayer</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">PUN2</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
+        <p>
+        A multiplayer top down shooter game with abilities. Choose your Rumbler and battle in Free for all mode or 3vs3 mode. Pick up good weapons in the arena and decide who's the best Rumbler!
+        </p>
+        <p>
+        *My first ever multiplayer game
+        </p>
 
-                <div class="game-slide">
-                    <img class="btn-round" src="images/rumbleking/ss4.jpg" style="width:100%">
-                </div>
-
-                <div class="game-slide">
-                    <img class="btn-round" src="images/rumbleking/ss2.jpg" style="width:100%">
-                </div>
-                <!-- <div class="game-slide">
-        <img class="btn-round" src="images/Repeater/5.png" style="width:100%">
+        <a href="https://youtu.be/cVpP4SZubXk" target="_blank">
+        <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
+        Watch gameplay trailer on Google Drive
+        </a>
     </div>
 
-    <div class="game-slide">
-        <img class="btn-round" src="images/Repeater/6.png" style="width:100%">
-    </div> -->
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <!-- <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span> -->
-            </div></div>
+    <div class="game-ss-scroller game-ss-scroller--landscape" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/rumbleking/ss1.png" alt="">
         </div>
-        <div class="col-sm">
-
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Topdown shooter</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Multiplayer</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">PUN2</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Unity</p>
-            <p>
-                A multiplayer top down shooter game with abilities. Choose your Rumbler and battle in Free for all mode or 3vs3 mode. Pick up good weapons in the arena and decide who's the best Rumbler!
-            </p>
-            <p>
-                *My first ever multiplayer game
-            </p>
-
-            <a href="https://youtu.be/cVpP4SZubXk" target="_blank">
-                <img src="images/youtubelogo.png" class="youtubelogo" alt="download">
-                Watch gameplay trailer on Google Drive
-            </a>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/rumbleking/ss3.jpg" alt="">
         </div>
-    </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/rumbleking/ss4.jpg" alt="">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/rumbleking/ss2.jpg" alt="">
+                </div>
+        </div>
 
 </div>
 
 <!-- 24: The Game (Remaster) -->
 <div class="container" id="24RemasterDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2026</p>
     <h3 class="bigFont text-center">24: The Game</h3>
     <h4 class="text-center text-muted">Remaster version of the game 24.</h4>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="max-width: 320px; margin: 0 auto;" data-game-slideshow>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS1.png" alt="24: The Game screenshot 1" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS2.png" alt="24: The Game screenshot 2" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS3.png" alt="24: The Game screenshot 3" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS4.png" alt="24: The Game screenshot 4" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS5.png" alt="24: The Game screenshot 5" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Remaster/SS6.png" alt="24: The Game screenshot 6" style="width:100%">
-                </div>
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="5" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p>
-                you'll be given 4 random numbers and 4 operators. Your goal is only one, make the number 24!
-            </p>
-            <p>
-                Easy, simple, yet it's challenging! 
-            </p>
-            <p>
-                Challenge your brain to solve 756 puzzles on casual mode
-            </p>
-            <p>
-                Train your under pressure management on Time Attack
-            </p>
-            <p>
-                Improve your decision making skill without going back in Hardcore mode!
-            </p>
-            <p>
-                and.. Collect 12 different Achievements to complete the game 100%!
-            </p>
-        </div>
+
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p>
+        you'll be given 4 random numbers and 4 operators. Your goal is only one, make the number 24!
+        </p>
+        <p>
+        Easy, simple, yet it's challenging!
+        </p>
+        <p>
+        Challenge your brain to solve 756 puzzles on casual mode
+        </p>
+        <p>
+        Train your under pressure management on Time Attack
+        </p>
+        <p>
+        Improve your decision making skill without going back in Hardcore mode!
+        </p>
+        <p>
+        and.. Collect 12 different Achievements to complete the game 100%!
+        </p>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS1.png" alt="24: The Game screenshot 1">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS2.png" alt="24: The Game screenshot 2">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS3.png" alt="24: The Game screenshot 3">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS4.png" alt="24: The Game screenshot 4">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS5.png" alt="24: The Game screenshot 5">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Remaster/SS6.png" alt="24: The Game screenshot 6">
+                </div>
+        </div>
+
 </div>
 
 <!-- 24 Madness -->
 <div class="container" id="24MadnessDiv" style="display:none;" class="answer_list">
+
     <br>
+    <p class="game-year text-center">2022</p>
     <h3 class="bigFont text-center">24 Madness</h3>
     <h4 class="text-center text-muted">24 game but it's madness!</h4>
     <br>
-    <div class="row">
-        <div class="col-sm">
-            <div class="slideshow-container" style="max-width: 320px; margin: 0 auto;" data-game-slideshow>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Madness/SS1.jpg" alt="24 Madness screenshot 1" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Madness/SS2.jpg" alt="24 Madness screenshot 2" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Madness/SS3.jpg" alt="24 Madness screenshot 3" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Madness/SS4.jpg" alt="24 Madness screenshot 4" style="width:100%">
-                </div>
-                <div class="game-slide">
-                    <img class="btn-round" src="images/24Madness/SS5.jpg" alt="24 Madness screenshot 5" style="width:100%">
-                </div>
-                <a class="prev" onclick="gameSlideNav(this, -1)">&#10094;</a>
-                <a class="next" onclick="gameSlideNav(this, 1)">&#10095;</a>
-            
-            <br>
-            <div style="text-align:center">
-                <span class="game-slide-dot" data-slide="0" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="1" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="2" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="3" onclick="gameSlideGo(this)"></span>
-                <span class="game-slide-dot" data-slide="4" onclick="gameSlideGo(this)"></span>
-            </div></div>
-        </div>
-        <div class="col-sm">
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
-            <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
-            <p>
-                Pretty much the same as the normal 24 game. but in this one, you'll be given a lot of numbers and operators to make the number 24!
-                choose your move carefully because the operators will be decreased after each move!
-            </p>
-            <p>
-                Beware of it's madness!
-            </p>
-        </div>
+
+    <div class="game-detail-info">
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Casual</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Puzzle</p>
+        <p class="tag btn btn-danger btn-round btn-lg extraHorizontalMargin">Mobile Game</p>
+        <p>
+        Pretty much the same as the normal 24 game. but in this one, you'll be given a lot of numbers and operators to make the number 24!
+        choose your move carefully because the operators will be decreased after each move!
+        </p>
+        <p>
+        Beware of it's madness!
+        </p>
     </div>
+
+    <div class="game-ss-scroller game-ss-scroller--portrait" data-game-ss>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Madness/SS1.jpg" alt="24 Madness screenshot 1">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Madness/SS2.jpg" alt="24 Madness screenshot 2">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Madness/SS3.jpg" alt="24 Madness screenshot 3">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Madness/SS4.jpg" alt="24 Madness screenshot 4">
+        </div>
+        <div class="game-ss-item">
+            <img class="btn-round" src="images/24Madness/SS5.jpg" alt="24 Madness screenshot 5">
+                </div>
+        </div>
+
 </div>
 
         </div>

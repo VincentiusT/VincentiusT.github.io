@@ -12,80 +12,63 @@
         }
     }
 
-    function getSlideshowRoot(el) {
-        return el && el.closest ? el.closest("[data-game-slideshow]") : null;
-    }
-
-    function showSlidesForRoot(root, index) {
-        if (!root) {
-            return;
-        }
-        var slides = root.querySelectorAll(".game-slide");
-        var dots = root.querySelectorAll(".game-slide-dot");
-        var n = slides.length;
-        if (n === 0) {
-            return;
-        }
-        var i = ((index % n) + n) % n;
-        root.dataset.slideIndex = String(i);
-        for (var j = 0; j < n; j++) {
-            slides[j].style.display = j === i ? "block" : "none";
-        }
-        for (var k = 0; k < dots.length; k++) {
-            if (dots[k].classList) {
-                dots[k].classList.toggle("active", k === i);
-            }
-        }
-    }
-
-    function resetSlideshowsInPanel(panelEl) {
+    function resetScreenshotScrollers(panelEl) {
         if (!panelEl) {
             return;
         }
-        var roots = panelEl.querySelectorAll("[data-game-slideshow]");
-        for (var r = 0; r < roots.length; r++) {
-            showSlidesForRoot(roots[r], 0);
+        var scrollers = panelEl.querySelectorAll("[data-game-ss]");
+        for (var i = 0; i < scrollers.length; i++) {
+            scrollers[i].scrollLeft = 0;
         }
     }
 
-    window.gameSlideNav = function (el, delta) {
-        var root = getSlideshowRoot(el);
-        if (!root) {
-            return;
-        }
-        var slides = root.querySelectorAll(".game-slide");
-        var cur = parseInt(root.dataset.slideIndex || "0", 10);
-        if (isNaN(cur)) {
-            cur = 0;
-        }
-        var next = cur + delta;
-        if (next >= slides.length) {
-            next = 0;
-        }
-        if (next < 0) {
-            next = slides.length - 1;
-        }
-        showSlidesForRoot(root, next);
-    };
+    function bindWheelScroll(scroller) {
+        scroller.addEventListener(
+            "wheel",
+            function (e) {
+                if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                    return;
+                }
+                if (e.deltaY === 0) {
+                    return;
+                }
+                var maxScroll = scroller.scrollWidth - scroller.clientWidth;
+                if (maxScroll <= 0) {
+                    return;
+                }
+                var next = scroller.scrollLeft + e.deltaY;
+                if (next < 0 || next > maxScroll) {
+                    if (
+                        (next < 0 && scroller.scrollLeft <= 0) ||
+                        (next > maxScroll && scroller.scrollLeft >= maxScroll)
+                    ) {
+                        return;
+                    }
+                }
+                e.preventDefault();
+                scroller.scrollLeft += e.deltaY;
+            },
+            { passive: false }
+        );
+    }
 
-    window.gameSlideGo = function (el) {
-        var root = getSlideshowRoot(el);
-        if (!root) {
-            return;
+    function initScreenshotScrollers() {
+        var scrollers = document.querySelectorAll("[data-game-ss]");
+        for (var i = 0; i < scrollers.length; i++) {
+            bindWheelScroll(scrollers[i]);
+            var images = scrollers[i].querySelectorAll("img");
+            for (var j = 0; j < images.length; j++) {
+                images[j].draggable = false;
+            }
         }
-        var idx = parseInt(el.getAttribute("data-slide"), 10);
-        if (isNaN(idx)) {
-            return;
-        }
-        showSlidesForRoot(root, idx);
-    };
+    }
 
     window.openGameDetail = function (detailId) {
         hideAll();
         var panel = document.getElementById(detailId);
         if (panel) {
             panel.style.display = "block";
-            resetSlideshowsInPanel(panel);
+            resetScreenshotScrollers(panel);
         }
         if (typeof window.jQuery !== "undefined") {
             window.jQuery("#gameDetailModal").modal("show");
@@ -94,5 +77,6 @@
 
     window.onload = function () {
         hideAll();
+        initScreenshotScrollers();
     };
 })();

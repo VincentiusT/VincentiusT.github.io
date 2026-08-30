@@ -328,6 +328,50 @@ video {
     animation-timing-function: ease-in-out;
 }
 
+.bg-my-game{
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("images/LlamaLizard/MainMenu_Bg 1.png");
+    background-size: cover;
+    margin-left: auto;
+    margin-left: auto;
+    background-position: center;
+    transition: 1s;
+
+    animation-name: animate;
+    animation-direction: normal;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+.bg-my-game > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.myGameDecor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    width: min(336px, 38.4vw);
+    height: auto;
+}
+
+.myGameDecor--lizard {
+    top: -2%;
+    left: 0%;
+}
+
+.myGameDecor--llama {
+    bottom: -2%;
+    right: 0%
+}
+
 .scroll-hint-wrap {
     margin-top: 18px;
 }
@@ -360,61 +404,6 @@ video {
         transform: translateY(8px);
         opacity: 1;
     }
-}
-
-body.is-loading {
-    overflow: hidden;
-}
-
-#loading-screen {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-    background-color: #000;
-    overflow: hidden;
-}
-
-#loading-screen-logo {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    width: 80px;
-    height: auto;
-    z-index: 100002;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    animation: floatLogo 2.5s ease-in-out infinite;
-}
-
-@keyframes floatLogo {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-html.loading-skip #loading-screen,
-html.loading-skip #loading-screen-logo {
-    display: none;
-}
-
-html.loading-skip body.is-loading {
-    overflow: auto;
-}
-
-html.loading-skip .navbar--await-reveal:not(.navbar--loader-complete) #navbarLogo {
-    visibility: visible;
-    opacity: 1;
-}
-
-html.loading-skip .navbar--await-reveal .navbar-left .nav-item,
-html.loading-skip .navbar--await-reveal #navbarMenu .nav-item,
-html.loading-skip .navbar--await-reveal .navbar-toggler {
-    transform: translateY(0);
-    opacity: 1;
-    transition: none;
 }
 
 /* @keyframes animate{
@@ -455,6 +444,14 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
 
 .outline{
     outline: auto;
+}
+
+.btn.outline:hover,
+.btn.outline:focus {
+    background-color: white;
+    color: #d65f5f;
+    font-weight: 700;
+    border-color: white;
 }
 
 .strokeOrange {
@@ -550,6 +547,15 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
     max-width: 100%;
 }
 
+.myGameCover {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .imageOverlay{
     position: absolute;
     top: 0;
@@ -611,6 +617,22 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
     transition: transform 0.25s;
 }
 
+.game-year {
+  color: #f5c518;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.imageOverlay .game-year {
+  font-size: 1rem;
+  margin-bottom: 0.15em;
+}
+
+#gameDetailModal .game-year {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
 .imageTitle{
     font-size: 2em;
     font-weight: bold;
@@ -632,81 +654,45 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  width: 100%;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
+/* App Store–style horizontal screenshot gallery */
+.game-ss-scroller {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pinch-zoom;
+  overscroll-behavior-x: contain;
+  padding: 4px 4px 8px;
+  margin: 16px -4px 0;
+  scrollbar-width: none;
 }
 
-/* Hide slides by default; JS shows active slide inside [data-game-slideshow] */
-.game-slide {
+.game-ss-scroller::-webkit-scrollbar {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
+.game-ss-item {
+  flex: 0 0 auto;
+  height: 300px;
+  scroll-snap-align: start;
+}
+
+.game-ss-item img {
+  height: 100%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  max-width: none;
+  display: block;
+  object-fit: contain;
+  -webkit-user-drag: none;
   user-select: none;
+  pointer-events: auto;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Slideshow dot indicators */
-.game-slide-dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .game-slide-dot:hover {
-  background-color: #717171;
+.game-detail-info {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .btn-gamelogo{
@@ -889,6 +875,21 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
     padding-right: 0;
 }
 
+#gameDetailModal .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+}
+
+#gameDetailModal .modal-body {
+    padding: 1rem 32px 32px;
+}
+
+#gameDetailModal .modal-header {
+    border-bottom: none;
+    padding: 1rem 1.25rem 0;
+}
+
 @media (max-width: 991.98px) {
     .bigFont {
         font-size: 2rem;
@@ -943,15 +944,8 @@ html.loading-skip .navbar--await-reveal .navbar-toggler {
         white-space: normal;
     }
 
-    .slideshow-container[style*="width: 60%"] {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .prev,
-    .next {
-        padding: 10px;
-        font-size: 16px;
+    .game-ss-item {
+        height: 240px;
     }
 }
 
